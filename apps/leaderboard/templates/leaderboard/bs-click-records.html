@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Records</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+    /* *{
+      border:1px solid black;
+    } */
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 765px}
+    h3, h4{
+      display: inline-block;
+      /* margin: 0px; */
+      text-align: center;
+      vertical-align: top;
+    }
+    .dropdown-menu{
+        background-color: rgb(190, 190, 190);
+        text-align: center;
+        padding: 10px;
+   }
+    .col-md-8{
+        margin-top: 3vh;
+    }
+
+    .col-md-6{
+        margin-top: 3vh;
+    }
+    .buttons{
+        display: block;
+        margin-top: 1vh;
+    }
+    .dropdown-item{
+        display: block;
+        font-size: 16pt;
+        margin: 10px;
+    }
+    .input{
+        width: 30%;
+        /* margin-top: 50px; */
+        margin: auto;
+    }
+    footer{
+        width: 100%;
+    }
+    .input div{
+        margin-top: 10px;
+    }
+    .form{
+        text-align: left;   
+    }
+    h1{
+      font-size: 99px;
+      font-family: 'Fugaz One', cursive;
+      margin: 10px;
+    }
+    #btnGroupDrop1{
+        background-color: #337ab7;
+        color: white;
+        font-size: 20pt;
+        padding: 10px;
+    }
+    a{
+      color: white;
+    }
+    .col-sm-9{
+      text-align: center;
+    }
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background: url("back.jpg");
+      height: 100%;
+      width: 18%;
+      color: white;
+    }
+    .container{
+      width: auto;
+      max-height: auto;;
+      overflow: auto;
+      display: inline-block;
+    }
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: rgb(0, 159, 252);
+      color: white;
+      padding: 15px;
+      width: 100%;
+    }
+    .table{
+      display:inline-block;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    .containers{
+      width: auto;
+      display: inline-block;
+    }
+    .button {
+  border-radius: 4px;
+  background-color: #337ab7;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.pic{
+    width: 40%;
+    margin: 20px 0px 20px 15px;
+}
+#header{
+    text-align: center;
+}
+/* .calc{
+    margin: 20px 0px;
+} */
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+        <h4><img src="https://www.tracfit.com/assets/img/nav-logo.png"></h4>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="bs-click-home.html">Home</a></li>
+            <li><a href="bs-click-submit.html">Enter Scores</a></li>
+            <li><a href="bs-click-profile.html">Profile</a></li>
+            <li class="active"><a href="bs-click-records.html">Records</a></li>
+        </ul><br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Site..">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+        </div>
+        </div>
+        <div class="col-sm-9">
+            <div id='header'>
+                <h1>My Records</h1>
+                <hr>
+            </div>
+
+                <!-- below is the button group -->
+                <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Power Lifts
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                            <a class="dropdown-item" href="#">Deadlift</a>
+                            <a class="dropdown-item" href="#">Sumo Deadlift</a>
+                            <a class="dropdown-item" href="#">Back Squat</a>
+                            <a class="dropdown-item" href="#">Bemch Press</a>
+                        </div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Olympic Lifts
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">Clean</a>
+                        <a class="dropdown-item" href="#">Jerk</a>
+                        <a class="dropdown-item" href="#">Clean and Jerk</a>
+                        <a class="dropdown-item" href="#">Snatch</a>
+                        <a class="dropdown-item" href="#">Press</a>
+                        <a class="dropdown-item" href="#">Front Squat</a>
+                        </div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Cardio
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">1 Mile Run</a>
+                        <a class="dropdown-item" href="#">2000 Meter Row</a>
+                        <a class="dropdown-item" href="#">2.4 Mile Bike</a>
+                        <a class="dropdown-item" href="#">Max Double Unders</a>
+                        </div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Gymnastics
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">Max Muscle Ups</a>
+                        <a class="dropdown-item" href="#">Max HS Walk</a>
+                        <a class="dropdown-item" href="#">AMRAP 60s GHD</a>
+                        <a class="dropdown-item" href="#">Tabata Squats</a>
+                    </div>
+                    </div>
+                    <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        WOD by Date
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <a class="dropdown-item" href="#">5/30/18</a>
+                        <a class="dropdown-item" href="#">5/29/18</a>
+                        <a class="dropdown-item" href="#">5/28/18</a>
+                        <a class="dropdown-item" href="#">5/27/18</a>
+                        <a class="dropdown-item" href="#">5/26/18</a>
+                        <a class="dropdown-item" href="#">5/25/18</a>
+                        <a class="dropdown-item" href="#">5/24/18</a>
+                        <a class="dropdown-item" href="#">5/23/18</a>
+                    </div>
+                    </div>
+
+                </div>
+            
+            
+                <div class="col-md-8 col-md-offset-2">
+                    <canvas id="lineChart"></canvas>
+                </div><br><br>
+                    <!-- calculator below -->
+                <div class="col-md-6 col-md-offset-3">
+                        <SCRIPT language=JavaScript>
+                  
+                                
+                                
+                                function perc1() {
+                                 a = document.form1.a.value/100;
+                                 b = a*document.form1.b.value;
+                                 document.form1.total1.value = b
+                                 }
+                                function perc2() {
+                                 a = document.form1.c.value;
+                                 b = document.form1.d.value;
+                                 c = a/b;
+                                 d = c*100;
+                                 document.form1.total2.value = d
+                                 }
+                                //-->
+                                </SCRIPT>
+                                
+                                <FORM name=form1 method="post">
+                                <TABLE cellSpacing=1 cellPadding=1 border=1>
+                                  <TBODY>
+                                  <TR>
+                                    <TD align=middle colSpan=3><B><FONT size=4>Percentage Calculator</FONT></B> 
+                                      </TD>
+                                  <TR>
+                                    <TD>What is <INPUT size=5 name=a> % of <INPUT size=5 name=b>?</TD>
+                                    <TD>Answer: <INPUT maxLength=40 size=5 name=total1></TD>
+                                    <TD><INPUT onclick=perc1() type=button value=Calculate></TD>
+                                  <TR>
+                                    <TD><INPUT size=5 name=c> is what percent of <INPUT size=5 
+                                name=d>?</TD>
+                                    <TD>Answer: <INPUT size=5 name=total2> %</TD>
+                                    <TD><INPUT onclick=perc2() type=button value=Calculate></TD>
+                                  <TR>
+                                    <TD align=middle 
+                                colSpan=3><INPUT type=reset value=Reset></TD></TR></TBODY></TABLE></FORM>
+                                    
+                </div>
+           <div class="buttons col-sm-1 col-sm-offset-5"><button>Add New Movement</button></div> 
+
+
+
+
+
+
+
+
+
+
+         </div>
+    </div>
+</div>
+<footer class="container-fluid">
+  <a href="www.admin.com">Admin</a>
+  <script type="text/javascript" src="mdb.js"></script>
+  <!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="/wp-content/themes/blankslate/mdb/js/bootstrap.min.js"></script>
+
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="/wp-content/themes/blankslate/mdb/js/mdb.min.js"></script>
+<script>
+        //line
+        var ctxL = document.getElementById("lineChart").getContext('2d');
+        var myLineChart = new Chart(ctxL, {
+            type: 'line',
+            data: {
+                labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018"],
+                datasets: [
+                    {
+                        label: "1 Rep Max Deadlift in LBS",
+                        fillColor: "rgba(220,220,220,0.2)",
+                        strokeColor: "rgba(220,220,220,1)",
+                        pointColor: "rgba(220,220,220,1)",
+                        pointStrokeColor: "#fff",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(220,220,220,1)",
+                        data: [155, 185, 220, 275, 315, 377, 425]
+                    }
+                ]
+            },
+            options: {
+                responsive: true
+            }    
+        });
+                    </script>
+</footer>
+
+</body>
+</html>

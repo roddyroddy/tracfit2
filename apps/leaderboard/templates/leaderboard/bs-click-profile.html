@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* *{
+      border:1px solid black;
+    } */
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 770px}
+    h3, h4{
+      display: inline-block;
+      /* margin: 0px; */
+      text-align: center;
+      vertical-align: top;
+    }
+    .input{
+        width: 30%;
+        /* margin-top: 50px; */
+        margin: auto;
+    }
+    footer{
+        width: 100%;
+    }
+    .input div{
+        margin-top: 10px;
+    }
+    .form{
+        text-align: left;   
+    }
+    h1{
+      font-size: 99px;
+      font-family: 'Fugaz One', cursive;
+      margin: 10px;
+    }
+    a{
+      color: white;
+    }
+    .col-sm-9{
+      text-align: center;
+    }
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background: url("back.jpg");
+      height: 100%;
+      width: 18%;
+      color: white;
+    }
+    .container{
+      width: auto;
+      max-height: auto;;
+      overflow: auto;
+      display: inline-block;
+    }
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: rgb(0, 159, 252);
+      color: white;
+      padding: 15px;
+      width: 100%;
+    }
+    .table{
+      display:inline-block;
+    }
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+    .containers{
+      width: auto;
+      display: inline-block;
+    }
+    .button {
+  border-radius: 4px;
+  background-color: #337ab7;
+  border: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.pic{
+    width: 40%;
+    margin: 20px 0px 20px 15px;
+}
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row content">
+        <div class="col-sm-3 sidenav">
+        <h4><img src="https://www.tracfit.com/assets/img/nav-logo.png"></h4>
+        <ul class="nav nav-pills nav-stacked">
+            <li><a href="bs-click-home.html">Home</a></li>
+            <li><a href="bs-click-submit.html">Enter Scores</a></li>
+            <li class="active"><a href="bs-click-profile.html">Profile</a></li>
+            <li><a href="bs-click-records.html">Records</a></li>
+        </ul><br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search Site..">
+            <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+            </span>
+        </div>
+        </div>
+        <div class="col-sm-9">
+            <div id='header'>
+                <h1>Profile</h1>
+                <hr>
+                <div class="form">
+                        <form>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                    <label for="inputEmail">Name</label>
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Name/Nickname">
+                                  </div>
+                                  <div class="form-group col-md-6">
+                                    <label for="inputPassword4">Password</label>
+                                    <input type="password" class="form-control" id="inputPassword4" placeholder="Change Password">
+                                  </div>
+                                </div>
+                                <!-- <div class="form-group">
+                                  <label for="inputAddress">Address</label>
+                                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group">
+                                  <label for="inputAddress2">Address 2</label>
+                                  <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                                </div> -->
+                                <div class="form-row">
+                                  <div class="form-group col-md-6">
+                                    <label for="inputCity">Email / Username</label>
+                                    <input type="text" placeholder="This will be your Login ID" class="form-control" id="inputCity">
+                                  </div>
+                                  <div class="form-group col-md-4">
+                                    <label for="inputState">Prefered Class Time</label>
+                                    <select id="inputState" class="form-control">
+                                      <option selected>Choose...</option>
+                                      <option>...</option>
+                                    </select>
+                                  </div>
+                                </div><br>
+                              
+                                <div class="form-group">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Not a bot!
+                                    </label>
+                                  </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Update</button>
+                              </form>
+                        
+                              <img class="pic" src="https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/jquery-file-upload-scripts.png">
+
+                </div>
+            </div>
+    </div>
+    </div>
+</div>
+<footer class="container-fluid">
+  <a href="www.admin.com">Admin</a>
+</footer>
+
+</body>
+</html>

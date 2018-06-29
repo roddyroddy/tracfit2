@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TracFit Leaderboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link href="https://fonts.googleapis.com/css?family=Fugaz+One" rel="stylesheet">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+        .row.content {
+            height: 100%;
+            background: linear-gradient(to right, white, white, lightgrey)
+        
+        }
+    
+        .w-auto {
+            width: auto;
+        }
+        .name{
+            /* border: 1px solid black; */
+            display: inline-block;
+    
+        }
+        /* Set gray background color and 100% height */
+        .sidenav {
+          background-color: #000000;
+          height: 951px;
+          color: white;
+          padding-top: 10px;
+        }
+        .table{
+            overflow: scroll;
+            max-height: 250px;
+            width: 350px;
+        }
+        .profile{
+          max-height: 50px;
+          max-width: 50px;
+        }
+        h1{
+          font-size: 50px;
+          font-family: 'Fugaz One', cursive;
+          margin: 10px;
+        }
+    
+        .workout{
+            width: 95%;
+            display: inline-block;
+        }
+        .workout div{
+            width: 45%;
+            vertical-align: top;
+            max-height: 300px;
+            overflow: scroll;
+        }
+        /* Set black background color, white text and some padding */
+        footer {
+          background-color: rgb(0, 0, 0);
+          color: white;
+          padding: 15px;
+        }
+    
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media only screen and (max-width: 576px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .workout{
+            display: block;
+            width: 95%;
+            }
+            .row.content {
+                height: auto;
+            }}
+        .B{
+            vertical-align: top;
+        }
+        body {font-family: Arial, Helvetica, sans-serif;}
+    </style>
+    
+    
+
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <h4>TracFit Leaderboard</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1">Leaderboard</a></li>
+        <li><a href="http://www.tracfit.com">TracFit.com</a></li>
+        <li><a href="https://tracfit.sites.zenplanner.com/login.cfm">ZenPlanner</a></li>
+        <li><a href="https://www.facebook.com/tracfitinc/">Facebook Page</a></li>
+      </ul><br>
+    </div>
+
+    <div class="col-sm-10">
+        <h1>Leaderboard</h1>
+        <hr>
+<br>
+        <div style="text-align: center" class="workout A">
+            <form action="/addscores" method="post">
+                {% csrf_token %}
+                <span style="text-decoration: underline">For AMRAP Scores</span><br><br>
+                <input type="text" name="amrap_score" value="0"><br>
+                <br><br>
+                <span style="text-decoration: underline">For Timed Scores</span><br><br>
+                Min:<br> <input type="text" name="minutes" value="00"><br> Sec:<br><input type="text" name="seconds" value="00"><br><br>
+                <input type="submit"value="submit">
+            </form><br>
+            
+            <a href="/"> << back</a>
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p><a href="/adminloginpage">Admin</a></p>
+  <script>
+        function myFunction() {
+            var x = document.getElementById("Demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+            // Get the modal
+            var modal = document.getElementById('myModal');
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }           
+  </script>
+</footer>
+
+</body>
+</html>

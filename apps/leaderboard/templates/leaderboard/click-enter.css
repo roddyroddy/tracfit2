@@ -1,0 +1,136 @@
+/* *{
+    border: 1px solid black;
+} */
+#header{
+    width: 90%;
+    height: 30px;
+    text-align: right;
+    margin-left: 5%;
+    padding-right: 30px;
+    padding-top: 5px;
+}
+#wrapper{
+    width: 100%;
+    height: 700px;
+    background-color: rgb(179, 179, 179);
+}
+input{
+    border-radius: 10px;
+}
+.left{
+    width: 30%;
+    display: inline-block;
+    height: auto;
+    text-align: center;
+    vertical-align: top;
+    margin: 50px 10px 10px 100px;
+}
+.right{
+    padding-top: 100px;
+    width: 50%;
+    display: inline-block;
+    margin: 50px;
+    text-align: right;
+    margin-left: -150px;
+
+}
+.right img{
+    width: 100%;
+    margin-top: -100px;
+}
+#notes{
+    width: 250px;
+    height: 50px;
+}
+.top{
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgb(46, 46, 46);
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.tops{
+    width: 90%;
+    margin-left: 5%;
+    overflow: auto;
+}
+.body{
+    width: 90%;
+    margin-left: 5%;
+}
+h1{
+    font-size: 40pt;
+    margin: 0px;
+}
+.nav{
+    height: 30px;
+    width: 90%;
+    vertical-align: top;
+    text-align: center;
+}
+.nav a{
+    margin: 5px 35px 0px 35px;
+    font-size: 20pt;
+    text-decoration: none;
+
+}
+h3{
+    font-size: 30pt;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+h4{
+    font-size: 25pt;
+    margin: 0px;
+}
+p{
+    font-size: 20pt;
+    margin: 0px;
+}
+table{
+    width: 100%;
+    border: 1px solid black;
+}
+td{
+    height: 30px;
+}
+td img{
+    width: 100%;
+}
+.tablewrap{
+    height: 400px;
+    overflow: auto;
+    margin-top: 30px;
+
+}
+/* .tablewrap th div{
+    position: absolute;
+    margin-top: -30px;
+
+} */
+#atheletes{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+    
+#atheletes td, #atheletes th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+    
+#atheletes tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+    
+#atheletes tr:hover {
+    background-color: #ddd;
+}
+    
+#atheletes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(0, 195, 255);
+    color: white;
+}

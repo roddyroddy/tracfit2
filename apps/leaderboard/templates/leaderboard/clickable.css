@@ -1,0 +1,41 @@
+/* *{
+    border: 1px solid black;
+} */
+#header{
+    width: 90%;
+    height: 30px;
+    text-align: right;
+    margin-left: 5%;
+    padding-right: 30px;
+}
+#body{
+    width: 90%;
+    height: 110%;
+    text-align: center;
+    margin-left: 5%;
+}
+#body img{
+    width: 100px;
+    height: 70px;
+    vertical-align: center;
+    margin-top: 200px;
+}
+.calendar{
+    display: inline-block;
+    text-align: center;
+}
+.today{
+    margin: 0px;
+    color: teal;
+    text-decoration: none;
+}
+#body div{
+    text-align: top;
+}
+h3{
+    margin: 0px;
+    padding: 0px;
+}
+.pic{
+    margin-top: -180px;
+}

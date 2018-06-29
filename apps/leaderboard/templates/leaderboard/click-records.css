@@ -1,0 +1,178 @@
+/* *{
+    border: 1px solid black;
+} */
+#header{
+    width: 90%;
+    height: 30px;
+    text-align: right;
+    margin-left: 5%;
+    padding-right: 30px;
+    padding-top: 5px;
+}
+#wrapper{
+    width: 100%;
+    height: auto;
+    background-color: rgb(179, 179, 179);
+}
+input{
+    border-radius: 10px;
+}
+.left{
+    width: 30%;
+    display: inline-block;
+    height: 500px;
+    text-align: center;
+    vertical-align: top;
+    margin: 30px 10px 10px 100px;
+}
+.right{
+    /* padding-top: 100px; */
+    width: 50%;
+    display: inline-block;
+    margin: 30px;
+    text-align: right;
+    height: 500px;
+    /* margin-left: -150px; */
+
+}
+#notes{
+    width: 250px;
+    height: 50px;
+}
+.top{
+    width: 90%;
+    margin-left: 5%;
+    background-color: rgb(46, 46, 46);
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.tops{
+    width: 90%;
+    margin-left: 5%;
+    overflow: auto;
+}
+.body{
+    width: 90%;
+    margin-left: 5%;
+}
+h1{
+    font-size: 40pt;
+    margin: 0px;
+}
+.nav{
+    height: 30px;
+    width: 90%;
+    vertical-align: top;
+    text-align: center;
+}
+.nav a{
+    margin: 5px 35px 0px 35px;
+    font-size: 20pt;
+    text-decoration: none;
+
+}
+h3{
+    font-size: 30pt;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+h4{
+    font-size: 25pt;
+    margin: 0px;
+}
+p{
+    font-size: 20pt;
+    margin: 0px;
+}
+table{
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+}
+td{
+    height: 30px;
+}
+td img{
+    width: 100%;
+}
+.tablewrap{
+    height: 400px;
+    overflow: auto;
+    margin-top: 30px;
+
+}
+/* .tablewrap th div{
+    position: absolute;
+    margin-top: -30px;
+
+} */
+#atheletes{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+    
+#atheletes td, #atheletes th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+    
+#atheletes tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+    
+#atheletes tr:hover {
+    background-color: #ddd;
+}
+    
+#atheletes th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(0, 195, 255);
+    color: white;
+}
+.dropbtn {
+    background-color:  rgb(0, 195, 255);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0px;
+    width: 54%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow: auto;
+    max-height: 200px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color:  rgb(0, 135, 177);
+}
